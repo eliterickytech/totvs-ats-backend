@@ -15,6 +15,8 @@ namespace Totvs.ATS.Domain
         public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public string Password { get; set; }
+        public string Permission { get; set; } = nameof(PermissionType.Candidate);
         public string Linkedin { get; set; }
         public Curriculum Curriculum { get; set; }
 
@@ -30,5 +32,10 @@ namespace Totvs.ATS.Domain
             this.VacancyId.Remove(vacancyId);
         }
 
+    }
+    public enum PermissionType
+    {
+        Admin = 1,
+        Candidate = 2
     }
 }

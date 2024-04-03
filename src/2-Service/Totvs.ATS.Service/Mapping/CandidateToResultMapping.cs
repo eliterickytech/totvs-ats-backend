@@ -19,6 +19,7 @@ namespace Totvs.ATS.Service.Mapping
                 Email = candidate.Email,
                 Phone = candidate.Phone,
                 Linkedin = candidate.Linkedin,
+                Permission = candidate.Permission,
                 Curriculum = new CurriculumResult
                 {
                     Experiencies = candidate.Curriculum.Experiencies,

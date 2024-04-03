@@ -22,6 +22,8 @@ namespace Totvs.ATS.Crosscutting.Ioc
             services
                 .AddScoped<ICandidateService, CandidateService>()
                 .AddScoped<IVacancyService, VacancyService>()
+                .AddScoped<ILoginService, LoginService>()
+                .AddScoped<ITokenApplication, TokenApplication>()
                 .AddScoped<IApplyVacancyCandidateService, ApplyVacancyCandidateService>();
             services
                 .AddScoped<ICandidateRepository, CandidateRepository>()

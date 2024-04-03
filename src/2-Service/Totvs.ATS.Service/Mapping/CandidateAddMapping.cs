@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Totvs.ATS.Crosscuting.Shared;
 using Totvs.ATS.Domain;
 using Totvs.ATS.Service.Input;
 
@@ -12,11 +13,12 @@ namespace Totvs.ATS.Service.Mapping
     {
         public static Candidate Map(this CandidateAddInput input)
         {
-            return new Candidate
+            var candidate = new Candidate
             {
                 Id = input.Id,
                 Name = input.Name,
                 Email = input.Email,
+                Password = input.Password,
                 Phone = input.Phone,
                 Linkedin = input.Linkedin,
                 Curriculum = new Curriculum
@@ -26,6 +28,10 @@ namespace Totvs.ATS.Service.Mapping
                     Habilities = input.Curriculum.Habilities
                 }
             };
+
+            candidate.Password = Utils.EncodePassword(candidate);
+
+            return candidate;
         }
     }
 }

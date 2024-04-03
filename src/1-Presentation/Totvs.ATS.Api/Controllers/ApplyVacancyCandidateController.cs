@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Totvs.ATS.Domain;
 using Totvs.ATS.Service.Input;
 using Totvs.ATS.Service.Interfaces;
@@ -7,6 +8,7 @@ using Totvs.ATS.Shared.Interfaces;
 namespace Totvs.ATS.Api.Controllers
 {
     [Route("api/v1/[controller]")]
+    [Authorize]
     [ApiController]
     public class ApplyVacancyCandidateController : BaseController
     {
@@ -25,7 +27,9 @@ namespace Totvs.ATS.Api.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+
         public async Task<IActionResult> Post(ApplyVacancyCadidateInput input)
         {
             return CreatedOrBadRequest(await _applyVacancyCandidateService.AddAsync(input));
@@ -41,6 +45,7 @@ namespace Totvs.ATS.Api.Controllers
         [HttpDelete("{candidateId}/{vacancyId}")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(Guid candidateId, Guid vacancyId)
         {

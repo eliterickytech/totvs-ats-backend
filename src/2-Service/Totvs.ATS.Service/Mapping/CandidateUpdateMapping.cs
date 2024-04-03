@@ -17,6 +17,7 @@ namespace Totvs.ATS.Service.Mapping
                 Id = input.Id,
                 Name = input.Name,
                 Email = input.Email,
+                Password = input.Password,
                 Phone = input.Phone,
                 Linkedin = input.Linkedin,
                 Curriculum = new Curriculum

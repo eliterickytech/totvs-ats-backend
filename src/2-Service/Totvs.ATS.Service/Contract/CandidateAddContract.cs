@@ -22,6 +22,7 @@ namespace Totvs.ATS.Service.Contract
                 .IsNotNullOrWhiteSpace(entity.Name, "Name", "Name is required")
                 .IsNotNullOrWhiteSpace(entity.Email, "Email", "Email is required")
                 .IsEmail(entity.Email, "Email", "Email is invalid")
+                .IsNotNullOrWhiteSpace(entity.Password, "Password", "Password is required")
                 .IsNotNullOrWhiteSpace(entity.Phone, "Phone", "Phone is required")
                 .IsNotNullOrWhiteSpace(entity.Id.ToString(), "Id", "Id is required")
                 .IsNotNull(entity.Curriculum, "Curriculum", "Curriculum is required"));

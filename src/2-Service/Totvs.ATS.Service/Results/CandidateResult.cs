@@ -13,6 +13,7 @@ namespace Totvs.ATS.Service.Results
         public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public string Permission { get; set; }
         public string Linkedin { get; set; }
         public CurriculumResult Curriculum { get; set; }
         public List<Guid> VacancyIds { get; set; } = new List<Guid>();
