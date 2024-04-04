@@ -8,10 +8,6 @@ namespace Totvs.ATS.Service.Input
 {
     public class CurriculumInput
     {
-        public IList<string> Experiencies { get; set; }
 
-        public IList<string> Educations { get; set; }
-
-        public IList<string> Habilities { get; set; }
     }
 }

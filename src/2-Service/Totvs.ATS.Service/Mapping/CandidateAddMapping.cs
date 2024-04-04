@@ -15,7 +15,7 @@ namespace Totvs.ATS.Service.Mapping
         {
             var candidate = new Candidate
             {
-                Id = input.Id,
+                Id = Guid.NewGuid(),
                 Name = input.Name,
                 Email = input.Email,
                 Password = input.Password,
@@ -23,9 +23,9 @@ namespace Totvs.ATS.Service.Mapping
                 Linkedin = input.Linkedin,
                 Curriculum = new Curriculum
                 {
-                    Experiencies = input.Curriculum.Experiencies,
-                    Educations = input.Curriculum.Educations,
-                    Habilities = input.Curriculum.Habilities
+                    Experiencies = input.Experiencies,
+                    Educations = input.Educations,
+                    Habilities = input.Habilities
                 }
             };
 

@@ -14,9 +14,9 @@ namespace Totvs.ATS.Tests.FakeData
     {
         public CurriculumInputFaker()
         {
-            RuleFor(c => c.Experiencies, f => f.Make(5, () => f.Lorem.Sentence()).ToList());
-            RuleFor(c => c.Educations, f => f.Make(3, () => f.Lorem.Sentence()).ToList());
-            RuleFor(c => c.Habilities, f => f.Make(5, () => f.Random.Word()).ToList());
+            //RuleFor(c => c.Experiencies, f => f.Make(5, () => f.Lorem.Sentence()).ToList());
+            //RuleFor(c => c.Educations, f => f.Make(3, () => f.Lorem.Sentence()).ToList());
+            //RuleFor(c => c.Habilities, f => f.Make(5, () => f.Random.Word()).ToList());
         }
     }
 }

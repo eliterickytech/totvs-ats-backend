@@ -22,7 +22,6 @@ namespace Totvs.ATS.Service.Contract
                 .IsNotNullOrWhiteSpace(entity.Title, "Title", "Title is required")
                 .IsNotNullOrWhiteSpace(entity.Description, "Description", "Description is required")
                 .IsNotNull(entity.Requirement, "Requirement", "Requirement is required")
-                .IsNotNullOrWhiteSpace(entity.Id.ToString(), "Id", "Id is required")
                 );
         }
     }

@@ -8,7 +8,6 @@ using Totvs.ATS.Shared.Interfaces;
 namespace Totvs.ATS.Api.Controllers
 {
     [Route("api/v1/[controller]")]
-    [Authorize]
     [ApiController]
     public class VacancyController : BaseController
     {

@@ -12,7 +12,7 @@ namespace Totvs.ATS.Service.Mapping
     {
         public static Vacancy Map(this VacancyAddInput input)
         {
-            return new Vacancy(input.Id, input.Title, input.Description, input.Requirement);
+            return new Vacancy(Guid.NewGuid(), input.Title, input.Description, input.Requirement);
         }
     }
 }

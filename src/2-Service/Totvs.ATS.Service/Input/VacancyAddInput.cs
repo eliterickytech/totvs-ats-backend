@@ -8,8 +8,6 @@ namespace Totvs.ATS.Service.Input
 {
     public class VacancyAddInput
     {
-        public Guid Id { get; set; }
-
         public string Title { get; set; }  
         
         public string Description { get; set; }

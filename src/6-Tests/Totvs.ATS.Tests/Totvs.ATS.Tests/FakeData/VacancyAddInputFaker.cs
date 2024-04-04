@@ -9,7 +9,6 @@ namespace Totvs.ATS.Tests.FakeData
     {
         public VacancyAddInputFaker()
         {
-            RuleFor(v => v.Id, f => f.Random.Guid());
             RuleFor(v => v.Title, f => f.Lorem.Sentence());
             RuleFor(v => v.Description, f => f.Lorem.Paragraph());
             RuleFor(v => v.Requirement, f => f.Make(5, () => f.Lorem.Word()).ToList());

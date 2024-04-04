@@ -20,7 +20,11 @@ namespace Totvs.ATS.Service.Input
 
         public string Linkedin { get; set; }
 
-        public CurriculumInput Curriculum { get; set; }
+        public IList<string> Experiencies { get; set; }
+
+        public IList<string> Educations { get; set; }
+
+        public IList<string> Habilities { get; set; }
 
     }
 }

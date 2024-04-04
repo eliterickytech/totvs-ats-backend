@@ -27,7 +27,7 @@
             var input = _candidateAddInputFaker.Generate();
 
             _candidateRepositoryMock.Setup(x => x.AddAsync(It.IsAny<Candidate>())).Returns(Task.CompletedTask);
-            _candidateRepositoryMock.Setup(x => x.GetByIdAsync(input.Id)).ReturnsAsync(new Candidate());
+            //_candidateRepositoryMock.Setup(x => x.GetByIdAsync(input.Id)).ReturnsAsync(new Candidate());
 
             var result = await service.AddAsync(input);
 

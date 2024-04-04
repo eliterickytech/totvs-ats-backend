@@ -16,7 +16,6 @@ namespace Totvs.ATS.Tests.FakeData
             RuleFor(c => c.Password, f => f.Internet.Password());
             RuleFor(c => c.Phone, f => f.Phone.PhoneNumber());
             RuleFor(c => c.Linkedin, f => $"https://www.linkedin.com/in/{f.Internet.UserName()}");
-            RuleFor(c => c.Curriculum, f => new CurriculumInputFaker().Generate());
         }
     }
 
